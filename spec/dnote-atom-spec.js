@@ -1,6 +1,6 @@
 'use babel';
 
-import AtomDnote from '../lib/atom-dnote';
+import AtomDnote from '../lib/dnote-atom';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
@@ -12,32 +12,32 @@ describe('AtomDnote', () => {
 
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
-    activationPromise = atom.packages.activatePackage('atom-dnote');
+    activationPromise = atom.packages.activatePackage('dnote-atom');
   });
 
-  describe('when the atom-dnote:toggle event is triggered', () => {
+  describe('when the dnote:new event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
-      expect(workspaceElement.querySelector('.atom-dnote')).not.toExist();
+      expect(workspaceElement.querySelector('.dnote-atom')).not.toExist();
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'atom-dnote:toggle');
+      atom.commands.dispatch(workspaceElement, 'dnote:new');
 
       waitsForPromise(() => {
         return activationPromise;
       });
 
       runs(() => {
-        expect(workspaceElement.querySelector('.atom-dnote')).toExist();
+        expect(workspaceElement.querySelector('.dnote-atom')).toExist();
 
-        let atomDnoteElement = workspaceElement.querySelector('.atom-dnote');
+        let atomDnoteElement = workspaceElement.querySelector('.dnote-atom');
         expect(atomDnoteElement).toExist();
 
         let atomDnotePanel = atom.workspace.panelForItem(atomDnoteElement);
         expect(atomDnotePanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'atom-dnote:toggle');
+        atom.commands.dispatch(workspaceElement, 'dnote:new');
         expect(atomDnotePanel.isVisible()).toBe(false);
       });
     });
@@ -51,11 +51,11 @@ describe('AtomDnote', () => {
       // workspaceElement to the DOM are generally slower than those off DOM.
       jasmine.attachToDOM(workspaceElement);
 
-      expect(workspaceElement.querySelector('.atom-dnote')).not.toExist();
+      expect(workspaceElement.querySelector('.dnote-atom')).not.toExist();
 
       // This is an activation event, triggering it causes the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'atom-dnote:toggle');
+      atom.commands.dispatch(workspaceElement, 'dnote:new');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -63,9 +63,9 @@ describe('AtomDnote', () => {
 
       runs(() => {
         // Now we can test for view visibility
-        let atomDnoteElement = workspaceElement.querySelector('.atom-dnote');
+        let atomDnoteElement = workspaceElement.querySelector('.dnote-atom');
         expect(atomDnoteElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'atom-dnote:toggle');
+        atom.commands.dispatch(workspaceElement, 'dnote:new');
         expect(atomDnoteElement).not.toBeVisible();
       });
     });

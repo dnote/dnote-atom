@@ -1,18 +1,16 @@
 {
-  "name": "atom-dnote",
-  "main": "./lib/atom-dnote",
+  "name": "dnote-atom",
+  "main": "./lib/dnote-atom",
   "version": "0.0.0",
-  "description": "A short description of your package",
-  "keywords": [
-  ],
+  "description": "Capture your coding wisdom inside Atom",
+  "keywords": [],
   "activationCommands": {
-    "atom-workspace": "atom-dnote:toggle"
+    "atom-workspace": "dnote:new"
   },
-  "repository": "https://github.com/atom/atom-dnote",
+  "repository": "https://github.com/atom/dnote-atom",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
