@@ -1,7 +1,7 @@
 {
   "name": "dnote-atom",
   "main": "./lib/dnote-atom",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Capture your coding wisdom inside Atom",
   "keywords": [],
   "activationCommands": {
@@ -12,5 +12,9 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1"
+  }
 }
