@@ -3,7 +3,11 @@
   "main": "./lib/index.js",
   "version": "0.1.0",
   "description": "Capture your coding wisdom inside Atom",
-  "keywords": ["dnote", "note", "learning"],
+  "keywords": [
+    "dnote",
+    "note",
+    "learning"
+  ],
   "activationCommands": {
     "atom-workspace": "dnote:new"
   },
@@ -12,7 +16,9 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "opn": "^5.3.0"
+  },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
     "eslint": "^4.19.1"
