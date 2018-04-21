@@ -1,9 +1,13 @@
 {
   "name": "dnote-atom",
   "main": "./lib/index.js",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Capture your coding wisdom inside Atom",
-  "keywords": ["dnote", "note", "learning"],
+  "keywords": [
+    "dnote",
+    "note",
+    "learning"
+  ],
   "activationCommands": {
     "atom-workspace": "dnote:new"
   },
