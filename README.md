@@ -16,9 +16,12 @@ Or download from Atom Settings.
 
 This package requires [Dnote CLI](https://github.com/dnote-io/cli) and integrates with it.
 
-## Hotkeys
+## Use
 
-<kbd>ctrl</kbd> + <kbd>shfit</kbd> + <kbd>d</kbd> = Start writing a new note.
+Ways to write a new note:
+
+* <kbd>ctrl</kbd> + <kbd>shfit</kbd> + <kbd>d</kbd>
+* Click a shortcut in the status bar
 
 ## How It Works
 
