@@ -2,11 +2,15 @@
 //
 // See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
 // for a full listing of what's available.
-@import "ui-variables";
+// @import "ui-variables";
 
 .dnote-tile-wrapper {
   display: inline-flex;
   height: 100%;
+
+  &.hidden {
+    display: none;
+  }
 }
 
 .dnote-tile {
