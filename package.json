@@ -1,9 +1,13 @@
 {
   "name": "dnote-atom",
   "main": "./lib/index.js",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Capture your coding wisdom inside Atom",
-  "keywords": ["dnote", "note", "learning"],
+  "keywords": [
+    "dnote",
+    "note",
+    "learning"
+  ],
   "repository": "https://github.com/dnote-io/dnote-atom",
   "license": "MIT",
   "engines": {
