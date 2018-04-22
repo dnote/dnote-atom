@@ -3,14 +3,7 @@
   "main": "./lib/index.js",
   "version": "0.1.1",
   "description": "Capture your coding wisdom inside Atom",
-  "keywords": [
-    "dnote",
-    "note",
-    "learning"
-  ],
-  "activationCommands": {
-    "atom-workspace": "dnote:new"
-  },
+  "keywords": ["dnote", "note", "learning"],
   "repository": "https://github.com/dnote-io/dnote-atom",
   "license": "MIT",
   "engines": {
@@ -22,5 +15,21 @@
   "devDependencies": {
     "babel-eslint": "^8.2.3",
     "eslint": "^4.19.1"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
+  "configSchema": {
+    "showStatusBarIcon": {
+      "title": "Show Dnote icon in the status bar",
+      "description": "Clicking on the icon will open up a new note template.",
+      "type": "boolean",
+      "default": true,
+      "order": 1
+    }
   }
 }

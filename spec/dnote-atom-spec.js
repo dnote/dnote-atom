@@ -1,6 +1,6 @@
 "use babel";
 
-import AtomDnote from "../lib/dnote-atom";
+import AtomDnote from "../lib/index";
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
